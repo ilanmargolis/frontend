@@ -3,7 +3,8 @@ import Page from "../../components/Page";
 import {Link} from "react-router-dom";
 import {Form, Input, FormGroup, Label, Button} from "react-strap";
 
-export default () => (
+export default () => {
+    // eslint-disable-next-line no-undef
     const [form, setForm] = useState({
         user: "",
         password: ""
@@ -43,8 +44,8 @@ export default () => (
                 </FormGroup>
                 <Link to="/forgotpassword">Esqueci a senha</Link>
                 <br/>
-                <Button>Entrar</Button>
+                <Button onSubmit={onSubmit}>Entrar</Button>
             </Form>
         </Page>
     )
-)
+}
