@@ -1,8 +1,13 @@
-import React from "react";
-import Page from "../../components/Page";
+import React from 'react';
+import { Alert } from 'reactstrap';
+import Page from '../../components/Page';
 
-export default (props) => (
-    <div title="Home">
-        Home
-    </div>
-)
+export default function index() {
+  return (
+    <Page title="Homepage">
+      <Alert color="primary">
+        A simple primary alert—check it out!
+      </Alert>
+    </Page>
+  );
+}

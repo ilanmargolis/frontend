@@ -1,15 +1,15 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from "react-router-dom";
-import Home from "../pages/home";
-import SignIn from "../pages/SignIn";
-import ForgotPassword from "../pages/forgotpassword";
+import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
-export default () => (
-  <BrowserRouter>
-    <Switch>
-      <Route component={SignIn} exact path="/" />
-      <Route component={Home} exact path="/home" />
-      <Route component={ForgotPassword} exact path="/forgotpassword" />
-    </Switch>
-  </BrowserRouter>
+import App from './App';
+
+ReactDOM.render(
+  <>
+    <ToastContainer />
+    <App />
+  </>,
+  document.getElementById('root'),
 );

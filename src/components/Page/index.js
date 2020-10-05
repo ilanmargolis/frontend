@@ -1,11 +1,17 @@
-import React from "react";
-import { Card, CardBody, CardHeader, CardTitle } from "react-strap";
+import React from 'react';
+import {
+  Card, CardHeader, CardBody, CardTitle,
+} from 'reactstrap';
 
-export default ({children, title}) => (
+export default function index({ children, title }) {
+  return (
     <Card className="m-4">
-        <CardHeader>]
-            <CardTitle>{title}</CardTitle>
-        </CardHeader>
-        <CardBody>{children}</CardBody>
+      <CardHeader>
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <CardBody>
+        {children}
+      </CardBody>
     </Card>
-)
+  );
+}
